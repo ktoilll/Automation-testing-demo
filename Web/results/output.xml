@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.0 on darwin)" generated="2026-10-01T22:42:29.631375" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/ktoill/Desktop/Desktop/Test Automate/Web/tests">
+<suite id="s1-s1" name="Login" source="/Users/ktoill/Desktop/Desktop/Test Automate/Web/tests/login">
+<suite id="s1-s1-s1" name="Test4" source="/Users/ktoill/Desktop/Desktop/Test Automate/Web/tests/login/Test4.robot">
+<test id="s1-s1-s1-t1" name="TC_001 Verify Login Success" line="13">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:42:29.787358" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:42:29.787198" elapsed="6.105448"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:42:35.893332" elapsed="0.342460"/>
+</kw>
+<arg>/login</arg>
+<status status="PASS" start="2026-10-01T22:42:29.786931" elapsed="6.449002"/>
+</kw>
+<kw name="Input Text" owner="Web">
+<msg time="2026-10-01T22:42:36.236512" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:42:36.236123" elapsed="0.073114"/>
+</kw>
+<kw name="Input Text" owner="Web">
+<msg time="2026-10-01T22:42:36.309582" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:42:36.309424" elapsed="0.028135"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-10-01T22:42:36.337988" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:42:36.337821" elapsed="0.038285"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Web">
+<arg>You logged into a secure area!</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-10-01T22:42:36.376281" elapsed="0.656077"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:42:29.786651" elapsed="7.245909"/>
+</test>
+<test id="s1-s1-s1-t2" name="TC_002 Verify Login Failed" line="21">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:42:37.033325" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:42:37.033178" elapsed="4.393258"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:42:41.427978" elapsed="0.341767"/>
+</kw>
+<arg>/login</arg>
+<status status="PASS" start="2026-10-01T22:42:37.032992" elapsed="4.737250"/>
+</kw>
+<kw name="Input Text" owner="Web">
+<msg time="2026-10-01T22:42:41.771654" level="INFO">Typing text 'wronguser' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>wronguser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:42:41.770716" elapsed="0.072385"/>
+</kw>
+<kw name="Input Text" owner="Web">
+<msg time="2026-10-01T22:42:41.843415" level="INFO">Typing text 'wrongpass' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>wrongpass</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:42:41.843276" elapsed="0.023159"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-10-01T22:42:41.866773" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:42:41.866619" elapsed="0.026062"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Web">
+<arg>Your username is invalid!</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-10-01T22:42:41.892846" elapsed="0.630167"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:42:37.032733" elapsed="5.490523"/>
+</test>
+<test id="s1-s1-s1-t3" name="TC_003 Verify Checkbox Can Be Selected" line="29">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:42:42.524265" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/checkboxes'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:42:42.524111" elapsed="3.947939"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:42:46.472417" elapsed="0.334396"/>
+</kw>
+<arg>/checkboxes</arg>
+<status status="PASS" start="2026-10-01T22:42:42.523887" elapsed="4.283041"/>
+</kw>
+<kw name="Select Checkbox" owner="Web">
+<msg time="2026-10-01T22:42:46.807388" level="INFO">Selecting checkbox 'xpath=(//input[@type="checkbox"])[1]'.</msg>
+<arg>xpath=(//input[@type="checkbox"])[1]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:42:46.807147" elapsed="0.034021"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="Web">
+<msg time="2026-10-01T22:42:46.841701" level="INFO">Verifying checkbox 'xpath=(//input[@type="checkbox"])[1]' is selected.</msg>
+<arg>xpath=(//input[@type="checkbox"])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2026-10-01T22:42:46.841456" elapsed="0.008293"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:42:42.523495" elapsed="4.326437"/>
+</test>
+<test id="s1-s1-s1-t4" name="TC_004 Verify Checkbox Can Be Unselected" line="35">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:42:46.850638" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/checkboxes'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:42:46.850523" elapsed="10.976069"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:42:57.828824" elapsed="0.339767"/>
+</kw>
+<arg>/checkboxes</arg>
+<status status="PASS" start="2026-10-01T22:42:46.850347" elapsed="11.318400"/>
+</kw>
+<kw name="Unselect Checkbox" owner="Web">
+<msg time="2026-10-01T22:42:58.170091" level="INFO">Unselecting checkbox 'xpath=(//input[@type="checkbox"])[2]'.</msg>
+<arg>xpath=(//input[@type="checkbox"])[2]</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:42:58.169280" elapsed="0.034033"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="Web">
+<msg time="2026-10-01T22:42:58.203770" level="INFO">Verifying checkbox 'xpath=(//input[@type="checkbox"])[2]' is not selected.</msg>
+<arg>xpath=(//input[@type="checkbox"])[2]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2026-10-01T22:42:58.203591" elapsed="0.006612"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:42:46.850092" elapsed="11.360644"/>
+</test>
+<test id="s1-s1-s1-t5" name="TC_005 Verify Dropdown Option 1" line="41">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:42:58.211873" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/dropdown'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:42:58.211730" elapsed="8.207522"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:43:06.420491" elapsed="0.348349"/>
+</kw>
+<arg>/dropdown</arg>
+<status status="PASS" start="2026-10-01T22:42:58.211510" elapsed="8.557500"/>
+</kw>
+<kw name="Select From List By Label" owner="Web">
+<msg time="2026-10-01T22:43:06.770601" level="INFO">Selecting options from selection list 'id=dropdown' by label Option 1.</msg>
+<arg>id=dropdown</arg>
+<arg>Option 1</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-10-01T22:43:06.769588" elapsed="0.040670"/>
+</kw>
+<kw name="List Selection Should Be" owner="Web">
+<msg time="2026-10-01T22:43:06.810698" level="INFO">Verifying list 'id=dropdown' has option [ Option 1 ] selected.</msg>
+<msg time="2026-10-01T22:43:06.817227" level="INFO">Current page contains list 'id=dropdown'.</msg>
+<arg>id=dropdown</arg>
+<arg>Option 1</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2026-10-01T22:43:06.810533" elapsed="0.039734"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:42:58.211027" elapsed="8.639655"/>
+</test>
+<test id="s1-s1-s1-t6" name="TC_006 Verify Dropdown Option 2" line="47">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:43:06.851760" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/dropdown'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:43:06.851625" elapsed="16.387746"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:43:23.240276" elapsed="0.345533"/>
+</kw>
+<arg>/dropdown</arg>
+<status status="PASS" start="2026-10-01T22:43:06.851411" elapsed="16.734551"/>
+</kw>
+<kw name="Select From List By Label" owner="Web">
+<msg time="2026-10-01T22:43:23.587828" level="INFO">Selecting options from selection list 'id=dropdown' by label Option 2.</msg>
+<arg>id=dropdown</arg>
+<arg>Option 2</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-10-01T22:43:23.586520" elapsed="0.041576"/>
+</kw>
+<kw name="List Selection Should Be" owner="Web">
+<msg time="2026-10-01T22:43:23.628711" level="INFO">Verifying list 'id=dropdown' has option [ Option 2 ] selected.</msg>
+<msg time="2026-10-01T22:43:23.632813" level="INFO">Current page contains list 'id=dropdown'.</msg>
+<arg>id=dropdown</arg>
+<arg>Option 2</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2026-10-01T22:43:23.628491" elapsed="0.025490"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:43:06.850976" elapsed="16.803961"/>
+</test>
+<test id="s1-s1-s1-t7" name="TC_007 Verify Add Remove Element" line="53">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:43:23.656885" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:43:23.656615" elapsed="4.602218"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:43:28.259748" elapsed="0.341709"/>
+</kw>
+<arg>/add_remove_elements/</arg>
+<status status="PASS" start="2026-10-01T22:43:23.656138" elapsed="4.945503"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-10-01T22:43:28.602473" level="INFO">Clicking button 'xpath=//button[text()="Add Element"]'.</msg>
+<arg>xpath=//button[text()="Add Element"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:28.601937" elapsed="0.052646"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>xpath=//button[text()="Delete"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-01T22:43:28.654823" elapsed="0.006233"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-10-01T22:43:28.661286" level="INFO">Clicking button 'xpath=//button[text()="Delete"]'.</msg>
+<arg>xpath=//button[text()="Delete"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:28.661176" elapsed="0.020346"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="Web">
+<arg>xpath=//button[text()="Delete"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-10-01T22:43:28.681697" elapsed="0.001917"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:43:23.655341" elapsed="5.028472"/>
+</test>
+<test id="s1-s1-s1-t8" name="TC_008 Verify Multiple Add Elements" line="61">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:43:28.684989" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:43:28.684663" elapsed="4.486300"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:43:33.172971" elapsed="0.346157"/>
+</kw>
+<arg>/add_remove_elements/</arg>
+<status status="PASS" start="2026-10-01T22:43:28.684432" elapsed="4.834855"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-10-01T22:43:33.520783" level="INFO">Clicking button 'xpath=//button[text()="Add Element"]'.</msg>
+<arg>xpath=//button[text()="Add Element"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:33.519720" elapsed="0.054852"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-10-01T22:43:33.575200" level="INFO">Clicking button 'xpath=//button[text()="Add Element"]'.</msg>
+<arg>xpath=//button[text()="Add Element"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:33.574904" elapsed="0.020832"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-10-01T22:43:33.596136" level="INFO">Clicking button 'xpath=//button[text()="Add Element"]'.</msg>
+<arg>xpath=//button[text()="Add Element"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:33.595933" elapsed="0.021103"/>
+</kw>
+<kw name="Get Element Count" owner="Web">
+<msg time="2026-10-01T22:43:33.621817" level="INFO">${count} = 3</msg>
+<var>${count}</var>
+<arg>xpath=//button[text()="Delete"]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:33.617694" elapsed="0.004149"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-10-01T22:43:33.623547" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${count}</arg>
+<arg>3</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-10-01T22:43:33.622224" elapsed="0.001386"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:43:28.684027" elapsed="4.939984"/>
+</test>
+<test id="s1-s1-s1-t9" name="TC_009 Verify Table Is Displayed" line="70">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:43:33.624833" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/tables'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:43:33.624705" elapsed="5.161622"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:43:38.788910" elapsed="0.336023"/>
+</kw>
+<arg>/tables</arg>
+<status status="PASS" start="2026-10-01T22:43:33.624533" elapsed="5.500623"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>id=table1</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-01T22:43:39.125925" elapsed="0.018047"/>
+</kw>
+<kw name="Page Should Contain" owner="Web">
+<msg time="2026-10-01T22:43:39.153636" level="INFO">Current page contains text 'Last Name'.</msg>
+<arg>Last Name</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-01T22:43:39.144173" elapsed="0.009524"/>
+</kw>
+<kw name="Page Should Contain" owner="Web">
+<msg time="2026-10-01T22:43:39.157348" level="INFO">Current page contains text 'First Name'.</msg>
+<arg>First Name</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-01T22:43:39.153800" elapsed="0.003583"/>
+</kw>
+<kw name="Page Should Contain" owner="Web">
+<msg time="2026-10-01T22:43:39.160745" level="INFO">Current page contains text 'Email'.</msg>
+<arg>Email</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-01T22:43:39.157468" elapsed="0.003302"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:43:33.624217" elapsed="5.537177"/>
+</test>
+<test id="s1-s1-s1-t10" name="TC_010 Verify First Row Data In Table" line="78">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:43:39.162243" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/tables'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:43:39.162082" elapsed="5.910004"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:43:45.074447" elapsed="0.344219"/>
+</kw>
+<arg>/tables</arg>
+<status status="PASS" start="2026-10-01T22:43:39.161924" elapsed="6.256878"/>
+</kw>
+<kw name="Get Text" owner="Web">
+<msg time="2026-10-01T22:43:45.439265" level="INFO">${last_name} = Smith</msg>
+<var>${last_name}</var>
+<arg>xpath=//table[@id="table1"]/tbody/tr[1]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:45.419228" elapsed="0.020083"/>
+</kw>
+<kw name="Get Text" owner="Web">
+<msg time="2026-10-01T22:43:45.444770" level="INFO">${first_name} = John</msg>
+<var>${first_name}</var>
+<arg>xpath=//table[@id="table1"]/tbody/tr[1]/td[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:45.439475" elapsed="0.005318"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${last_name}</arg>
+<arg>Smith</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-01T22:43:45.445071" elapsed="0.001402"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${first_name}</arg>
+<arg>John</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-01T22:43:45.446557" elapsed="0.000115"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:43:39.161591" elapsed="6.285369"/>
+</test>
+<test id="s1-s1-s1-t11" name="TC_011 Verify File Upload" line="86">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:43:45.447831" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/upload'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:43:45.447682" elapsed="5.088484"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:43:50.538545" elapsed="0.346265"/>
+</kw>
+<arg>/upload</arg>
+<status status="PASS" start="2026-10-01T22:43:45.447519" elapsed="5.437439"/>
+</kw>
+<kw name="Choose File" owner="Web">
+<msg time="2026-10-01T22:43:50.891723" level="INFO">Sending /Users/ktoill/Desktop/Desktop/Test Automate/Web/tests/login/test_file.txt to browser.</msg>
+<msg time="2026-10-01T22:43:50.989600" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-01T22:43:50.989890" level="FAIL">InvalidArgumentException: Message: invalid argument: File not found : /Users/ktoill/Desktop/Desktop/Test Automate/Web/tests/login/test_file.txt
+  (Session info: chrome=154.0.8037.58)
+Stacktrace:
+0   chromedriver                        0x0000000104520a84 chromedriver + 3508868
+1   chromedriver                        0x000000010420cf10 chromedriver + 282384
+2   chromedriver                        0x0000000104250150 chromedriver + 557392
+3   chromedriver                        0x000000010424c654 chromedriver + 542292
+4   chromedriver                        0x0000000104295c30 chromedriver + 842800
+5   chromedriver                        0x000000010424b42c chromedriver + 537644
+6   chromedriver                        0x00000001044eee68 chromedriver + 3305064
+7   chromedriver                        0x00000001044f2168 chromedriver + 3318120
+8   chromedriver                        0x00000001044d842c chromedriver + 3212332
+9   chromedriver                        0x00000001044f29f8 chromedriver + 3320312
+10  chromedriver                        0x00000001044cbf00 chromedriver + 3161856
+11  chromedriver                        0x000000010450efb4 chromedriver + 3436468
+12  chromedriver                        0x000000010450f114 chromedriver + 3436820
+13  chromedriver                        0x0000000104520744 chromedriver + 3508036
+14  libsystem_pthread.dylib             0x0000000186c33c04 _pthread_start + 132
+15  libsystem_pthread.dylib             0x0000000186c2eba4 thread_start + 4
+</msg>
+<arg>id=file-upload</arg>
+<arg>/Users/ktoill/Desktop/Desktop/Test Automate/Web/tests/login/test_file.txt</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="FAIL" start="2026-10-01T22:43:50.889927" elapsed="0.123056">InvalidArgumentException: Message: invalid argument: File not found : /Users/ktoill/Desktop/Desktop/Test Automate/Web/tests/login/test_file.txt
+  (Session info: chrome=154.0.8037.58)
+Stacktrace:
+0   chromedriver                        0x0000000104520a84 chromedriver + 3508868
+1   chromedriver                        0x000000010420cf10 chromedriver + 282384
+2   chromedriver                        0x0000000104250150 chromedriver + 557392
+3   chromedriver                        0x000000010424c654 chromedriver + 542292
+4   chromedriver                        0x0000000104295c30 chromedriver + 842800
+5   chromedriver                        0x000000010424b42c chromedriver + 537644
+6   chromedriver                        0x00000001044eee68 chromedriver + 3305064
+7   chromedriver                        0x00000001044f2168 chromedriver + 3318120
+8   chromedriver                        0x00000001044d842c chromedriver + 3212332
+9   chromedriver                        0x00000001044f29f8 chromedriver + 3320312
+10  chromedriver                        0x00000001044cbf00 chromedriver + 3161856
+11  chromedriver                        0x000000010450efb4 chromedriver + 3436468
+12  chromedriver                        0x000000010450f114 chromedriver + 3436820
+13  chromedriver                        0x0000000104520744 chromedriver + 3508036
+14  libsystem_pthread.dylib             0x0000000186c33c04 _pthread_start + 132
+15  libsystem_pthread.dylib             0x0000000186c2eba4 thread_start + 4
+</status>
+</kw>
+<kw name="Click Button" owner="Web">
+<arg>id=file-submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-01T22:43:51.013163" elapsed="0.000022"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Web">
+<arg>File Uploaded!</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-10-01T22:43:51.013293" elapsed="0.000016"/>
+</kw>
+<status status="FAIL" start="2026-10-01T22:43:45.447143" elapsed="5.566328">InvalidArgumentException: Message: invalid argument: File not found : /Users/ktoill/Desktop/Desktop/Test Automate/Web/tests/login/test_file.txt
+  (Session info: chrome=154.0.8037.58)
+Stacktrace:
+0   chromedriver                        0x0000000104520a84 chromedriver + 3508868
+1   chromedriver                        0x000000010420cf10 chromedriver + 282384
+2   chromedriver                        0x0000000104250150 chromedriver + 557392
+3   chromedriver                        0x000000010424c654 chromedriver + 542292
+4   chromedriver                        0x0000000104295c30 chromedriver + 842800
+5   chromedriver                        0x000000010424b42c chromedriver + 537644
+6   chromedriver                        0x00000001044eee68 chromedriver + 3305064
+7   chromedriver                        0x00000001044f2168 chromedriver + 3318120
+8   chromedriver                        0x00000001044d842c chromedriver + 3212332
+9   chromedriver                        0x00000001044f29f8 chromedriver + 3320312
+10  chromedriver                        0x00000001044cbf00 chromedriver + 3161856
+11  chromedriver                        0x000000010450efb4 chromedriver + 3436468
+12  chromedriver                        0x000000010450f114 chromedriver + 3436820
+13  chromedriver                        0x0000000104520744 chromedriver + 3508036
+14  libsystem_pthread.dylib             0x0000000186c33c04 _pthread_start + 132
+15  libsystem_pthread.dylib             0x0000000186c2eba4 thread_start + 4
+</status>
+</test>
+<test id="s1-s1-s1-t12" name="TC_012 Verify Dynamic Loading" line="93">
+<kw name="Open Page">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-10-01T22:43:51.014294" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/dynamic_loading/1'.</msg>
+<arg>${BASE_URL}${path}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-01T22:43:51.014167" elapsed="5.633638"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-01T22:43:56.649247" elapsed="0.339847"/>
+</kw>
+<arg>/dynamic_loading/1</arg>
+<status status="PASS" start="2026-10-01T22:43:51.014004" elapsed="5.975242"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-10-01T22:43:56.990788" level="INFO">Clicking button 'xpath=//button[text()="Start"]'.</msg>
+<arg>xpath=//button[text()="Start"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-01T22:43:56.989759" elapsed="0.062479"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Web">
+<arg>Hello World!</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-10-01T22:43:57.052489" elapsed="0.004775"/>
+</kw>
+<status status="PASS" start="2026-10-01T22:43:51.013685" elapsed="6.044334"/>
+</test>
+<kw name="Close Browser" owner="Web" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-01T22:43:57.060810" elapsed="1.110099"/>
+</kw>
+<status status="FAIL" start="2026-10-01T22:42:29.655956" elapsed="88.517594"/>
+</suite>
+<status status="FAIL" start="2026-10-01T22:42:29.655514" elapsed="88.521873"/>
+</suite>
+<status status="FAIL" start="2026-10-01T22:42:29.632979" elapsed="88.544696"/>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="11" fail="1" skip="0">Tests</stat>
+<stat name="Login" id="s1-s1" pass="11" fail="1" skip="0">Tests.Login</stat>
+<stat name="Test4" id="s1-s1-s1" pass="11" fail="1" skip="0">Tests.Login.Test4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
